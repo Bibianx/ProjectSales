@@ -1,9 +1,10 @@
-using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Models.Entities
 {
     public class Suppliers
     {
+        [Key]
         public Guid SupplierId { get; set; } = Guid.NewGuid();
         public string SupplierName { get; set; }
         public string ContactName { get; set; }
