@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
 using Models.Entities;
 
@@ -14,5 +13,11 @@ namespace Models
         public DbSet<Shippers> Shippers { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Orders> Orders { get; set; }
+        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
+
 }

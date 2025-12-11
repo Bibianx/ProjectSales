@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Models.Entities
 {
     public class Customers
     {
+        [Key]
         public Guid CustomerId { get; set; } = Guid.NewGuid();
         public string CustomerName { get; set; }
         public string ContactName { get; set; }

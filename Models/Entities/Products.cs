@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -7,6 +8,7 @@ namespace Models.Entities
     [Index(nameof(CategoryId), nameof(SupplierId))]
     public class Products
     {
+        [Key]
         public Guid ProductId { get; set; } = Guid.NewGuid();
         public string ProductName { get; set; }
         public int Unit { get; set; }

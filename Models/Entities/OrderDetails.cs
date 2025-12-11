@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,6 +7,7 @@ namespace Models.Entities
     [Index(nameof(OrderId), nameof(ProductId), IsUnique = true)]
     public class OrderDetails
     {
+        [Key]
         public Guid OrderDetailId { get; set; } = Guid.NewGuid();
         public string Quantity { get; set; }
 
