@@ -1,9 +1,9 @@
 using FluentValidation;
 using Models.Dtos;
 
-public class CreateProductDtoValidator : AbstractValidator<CategoriesRequest>
+public class CategoriesDtoValidator : AbstractValidator<CategoriesRequest>
 {
-    public CreateProductDtoValidator()
+    public CategoriesDtoValidator()
     {
         RuleFor(x => x.CategoryName)
             .NotEmpty().WithMessage("El nombre es obligatorio")
