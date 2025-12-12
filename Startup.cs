@@ -58,6 +58,7 @@ public class Startup(IConfiguration configuration)
     private static void RegisterServices(IServiceCollection services)
     {
         services.AddScoped<ICategoriesServices, CategoriesServices>();
+        services.AddScoped<IProductsServices, ProductsServices>();
     }
 
     private static void ConfigureApiVersion(IServiceCollection services)
